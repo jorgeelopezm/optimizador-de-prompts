@@ -55,4 +55,5 @@ pero más seguro y predecible.
 - `prompts/` — plantillas de prompt reutilizables.
 - `.claude/skills/auditar-prompt/` — aplica el rubric de arriba.
 - `.claude/skills/crear-pr/` — automatiza el flujo git/gh, nunca hace merge.
-- MCP `prompt-reviewer` (pendiente, fase 2) — checks determinísticos del rubric.
+- `mcp-server/` — MCP `prompt-reviewer` (activo): checks determinísticos del
+  rubric vía la tool `audit_prompt`, conectado a través de `.mcp.json`.

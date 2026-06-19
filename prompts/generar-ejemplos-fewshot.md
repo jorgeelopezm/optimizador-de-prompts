@@ -31,8 +31,8 @@ que usará el prompt en producción.
 
   | Criterio | Estado | Comentario |
   |---|---|---|
-  | Ejemplos (few-shot) | ❌ | No muestra cómo debería verse un resumen |
-  | Tags XML | ❌ | No separa instrucción de contexto |
-  | Formato de salida especificado | ⚠️ | Dice "3 bullets" pero no longitud ni tono |
-  | Claridad / ambigüedad | ⚠️ | No aclara qué hacer si el artículo es muy corto |
+  | Ejemplos (few-shot) | | No muestra cómo debería verse un resumen |
+  | Tags XML | | No separa instrucción de contexto |
+  | Formato de salida especificado | | Dice "3 bullets" pero no longitud ni tono |
+  | Claridad / ambigüedad | | No aclara qué hacer si el artículo es muy corto |
 ```
