@@ -1,0 +1,1 @@
+Esta es una prueba para este proyecto. Se edita README.md para verificar que la skill 'crear-pr' funciona correctamente.
