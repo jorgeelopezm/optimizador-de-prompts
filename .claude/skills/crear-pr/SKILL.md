@@ -1,6 +1,7 @@
 ---
 name: crear-pr
 description: Usar este skill cuando el usuario pida subir cambios a GitHub o crear un Pull Request. Se activa con frases como "sube esto a github", "crea un PR", "abre un pull request", "sube los cambios".
+model: haiku
 ---
 
 # Crear Pull Request
