@@ -25,7 +25,7 @@ según el contexto de la conversación, haciendo imposible comparar la calidad
 de un prompt a lo largo del tiempo o entre revisiones.
 
 **Decisión:** definir 4 criterios fijos, versionados en este archivo, y
-reutilizarlos en todos los componentes del proyecto (skill y futuro MCP).
+reutilizarlos en todos los componentes del proyecto (skill y MCP).
 
 **Alternativas consideradas:** dejar que el modelo decida los criterios caso
 por caso — más flexible ante casos nuevos, pero no comparable ni auditable
@@ -53,6 +53,7 @@ pero más seguro y predecible.
 ## Componentes
 
 - `prompts/` — plantillas de prompt reutilizables.
+- `plantillas/` - carpeta donde se guardan las plantillas de prompt generadas para uso futuro. El skill `auditar-prompt` ofrece guardar aquí la versión mejorada de un prompt tras la auditoría.
 - `.claude/skills/auditar-prompt/` — aplica el rubric de arriba.
 - `.claude/skills/crear-pr/` — automatiza el flujo git/gh, nunca hace merge.
 - `mcp-server/` — MCP `prompt-reviewer` (activo): checks determinísticos del

@@ -23,6 +23,9 @@ model: haiku
    - Sugerencias concretas
    - Propuesta de reescritura en formato diff (antes/después)
 
+5. Tras mostrar el diff, ofrecer guardar la versión mejorada como plantilla
+   reutilizable en `plantillas/`. Ver `## Guardar plantilla` abajo.
+
 ## Formato de salida
 
 | Criterio | Estado | Comentario |
@@ -34,3 +37,42 @@ model: haiku
 
 ### Propuesta de reescritura
 [diff antes/después]
+
+## Guardar plantilla
+
+Después de mostrar el diff (paso 5), preguntar:
+
+`¿Querés guardar la versión mejorada como plantilla en plantillas/? (s/n)`
+
+- Si responde **no**: terminar con "Listo, no se guardó nada."
+- Si responde **sí**:
+  1. Inferir un nombre de archivo kebab-case descriptivo a partir del propósito
+     del prompt (ej. `resumir-articulo-3-puntos.md`) y confirmarlo con el usuario
+     antes de escribir.
+  2. Si ya existe un archivo con ese nombre en `plantillas/`, avisar y pedir
+     confirmar la sobrescritura o un nombre nuevo antes de continuar.
+  3. Guardar SOLO el cuerpo del prompt mejorado (los tags XML como
+     `<instrucciones>`, `<ejemplo>` y el placeholder de input al final). Sin
+     frontmatter ni la tabla de auditoría — la plantilla es el prompt listo para
+     reusar, no el reporte. Seguir el estilo de `plantillas/resumir-articulo-3-puntos.md`.
+  4. Confirmar la ruta final: `✓ Guardado en: plantillas/<nombre>.md`
+
+### Ejemplo del flujo
+
+```
+[tabla de auditoría + diff de reescritura]
+
+¿Querés guardar la versión mejorada como plantilla en plantillas/? (s/n)
+> s
+Propongo el nombre: plantillas/clasificar-tickets-soporte.md ¿Lo confirmás? (s/n)
+> s
+✓ Guardado en: plantillas/clasificar-tickets-soporte.md
+```
+
+```
+[tabla de auditoría + diff de reescritura]
+
+¿Querés guardar la versión mejorada como plantilla en plantillas/? (s/n)
+> n
+Listo, no se guardó nada.
+```
