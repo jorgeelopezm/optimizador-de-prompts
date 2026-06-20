@@ -3,6 +3,8 @@
 Herramienta para **auditar y mejorar prompts** de forma consistente, y para
 **automatizar el flujo de subir esos cambios a GitHub** vía pull request.
 
+Enlace para demo: https://vimeo.com/1202978095
+
 Combina dos enfoques complementarios:
 
 - Checks **determinísticos** del rubric, vía el MCP `prompt-reviewer`.
